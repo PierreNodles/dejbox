@@ -133,6 +133,34 @@ new Vue({
             isActive:false
           }
         }
+      },
+      {
+        name:"Le boeuf fondant, sauce au vin & écrasé de pommes de terre",
+        price:"7,50€",
+        img: "./assets/boeuf-fondant.jpg",
+        cookingNotice: "À réchauffer au micro-onde pendant environ 2 mins",
+        weight:"420",
+        showModale:false,
+        tabs: {
+          description: {
+            title:"Description",
+            content:"Le plat indien par excellence : goûtez à notre incroyable poulet tikka massala ! Cette sauce au yaourt et aux épices est littéralement à tomber ! On ne voudrait pas vous gâcher la surprise mais : vous allez adorer !",
+            selected:true,
+            isActive:true,
+          },
+          ingredient: {
+            title:"Ingrédients",
+            content:"Tomate",
+            selected:false,
+            isActive:false
+          },
+          nutrition: {
+            title:"Valeurs nutrionnelles",
+            content:"C'est bon pour vous",
+            selected:false,
+            isActive:false
+          }
+        }
       }
     ]
   }

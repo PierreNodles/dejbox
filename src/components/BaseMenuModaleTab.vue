@@ -4,14 +4,14 @@
 
     <div class="tabs">
       <ul>
-        <li v-for="tab in tabs" v-bind:class="{'is-active': tab.isActive}">
+        <li v-for="tab in tabs" v-bind:class="{'is-active': tab.isActive}" v-bind:key="tab.id">
           <a @click="selectTab(tab)">
             <span class="tab-title">{{ tab.title }}</span>
           </a>
         </li>
       </ul>
     </div>
-    <div class="tab-details" v-for="tab in tabs" v-show="tab.isActive">
+    <div class="tab-details" v-for="tab in tabs" v-bind:key="tab.id" v-show="tab.isActive">
         <p>{{ tab.content }}</p>
     </div>
   </div>
@@ -55,6 +55,7 @@ export default {
           color:black;
           opacity:0.44;
           border:none;
+          font-family: 'Galano Grotesque Bold';
         }
         &.is-active {
           background-color:white;
@@ -75,6 +76,8 @@ export default {
     border-bottom-right-radius:5px;
     p {
       font-size:18px;
+      font-weight: bold;
+      color:#5D5D5D;
     }
 
   }

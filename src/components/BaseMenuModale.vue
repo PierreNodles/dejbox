@@ -234,6 +234,17 @@ export default {
           flex-grow: 1;
           display:flex;
           justify-content: space-between;
+          .single-menu-review {
+            .count-review {
+              font-size:16px !important;
+              margin-left:10px !important;
+            }
+          }
+          .menu-weight {
+            p {
+              font-size:18px;
+            }
+          }
         }
         .menu-cooking-notice {
           flex-grow: 1;
@@ -283,6 +294,8 @@ export default {
       top:0;
       left:0;
       width:100%;
+      height:100%;
+      margin-bottom:0;
       padding:20px 10px 10px 10px;
       .trigger {
         color:#616161;
@@ -310,7 +323,7 @@ export default {
           .menu-cooking-notice {
             display:none;
           }
-          
+
         }
       }
       .tab-column {

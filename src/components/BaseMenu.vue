@@ -5,9 +5,9 @@
       <span class="title-background">{{ name }} </span>
     </div>
 
-    <div class="columns menus">
+    <div class="columns is-multiline is-mobile menus">
 
-      <div class="column" v-for="menu in menus" v-bind:key="menu.id">
+      <div class="column is-one-third-desktop is-half-mobile" v-for="menu in menus" v-bind:key="menu.id">
         <div class="single-menu">
           <div class="menu-img">
             <figure class="main-img">
@@ -96,7 +96,7 @@ $red: #FF5A4F;
   .columns {
     margin:0 -33px;
     .column {
-      margin: 0 20px;
+      padding: 1rem 2rem 2rem 2rem;
 
       .single-menu {
         background-color:white;
@@ -230,6 +230,58 @@ $red: #FF5A4F;
         padding-left:0;
       }
     }
+    .columns {
+      margin:0;
+      .column {
+        padding: 10px;
+        .single-menu {
+          padding:10px;
+          .single-menu-details {
+            min-height:0;
+            .menu-name {
+              max-height:20px;
+              h3 {
+                font-size:12px;
+                overflow:hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+              }
+            }
+            .single-menu-review {
+              margin: 0px 0 10px;
+              .fa {
+                font-size: 10px;
+                margin: 0 1px;
+              }
+            }
+            .single-menu-footer {
+              .bubble {
+                width: 1.5em;
+                height: 1.5em;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                .first {
+                  font-size:12px;
+                }
+                &:hover, &:focus {
+                  width:4.5em;
+                  height:1.5em;
+                  .second {
+                    font-size:12px;
+                    span.plus {
+                      display:none;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
   }
 }
 </style>
