@@ -119,7 +119,8 @@ export default {
         margin-bottom:20px;
 
         h3 {
-          font-size:70px;
+          font-family: "Cocogoose-Narrow";
+          font-size:80px;
           line-height:75px;
           color:#151515;
           text-shadow: 0 3px 6px #0000002e;
@@ -130,6 +131,7 @@ export default {
       .feature-description {
         color:#6C6B6B;
         font-size:22px;
+        font-family: 'Galano Grotesque Bold';
       }
 
       .feature-details {
@@ -142,6 +144,7 @@ export default {
           margin-right:70px;
 
           p {
+            font-family: 'Galano Grotesque Bold';
             font-size: 22px;
             color: #2C2C2C;
 
@@ -165,6 +168,7 @@ export default {
             border-style:none;
             cursor:pointer;
 
+            font-family: 'Galano Grotesque Bold';
             font-size: 22px;
             color:white;
 
@@ -202,14 +206,15 @@ export default {
         align-items: center;
         cursor:pointer;
         span.new {
-          padding: 7px 20px 8px 10px;
+          font-family: "LibreBaskerville-Regular";
+
+          padding: 5px 18px 3px 15px;
           margin-left: 10px;
 
           border-radius: 25px;
-          background-color: red;
+          background-color: #FF5A4F;
 
           font-size: 0.7em;
-          line-height: 0.6em;
 
           color: white;
         }
@@ -220,5 +225,66 @@ export default {
 
     }
   }
+}
+
+@media only screen and (max-width: 767px) {
+.header {
+  .jumbotron {
+    z-index:-2;
+        background-image: url('~@/assets/background-mobile.jpg');
+    .feature {
+      justify-content: space-evenly;
+      padding-top:30%;
+      .feature-title {
+        h3 {
+          text-align: center;
+          font-size:40px !important;
+          line-height:40px;
+        }
+      }
+      .feature-description {
+        p {
+          text-align: center;
+          font-size:16px;
+        }
+      }
+      .feature-details {
+        margin:0;
+        align-items: flex-end;
+        justify-content: space-between;
+        .feature-price {
+          margin-right:0;
+          p {
+            font-size:14px;
+            span.price {
+              font-size:40px;
+              line-height:30px;
+            }
+          }
+        }
+        .feature-cta {
+          button {
+            width:120px;
+            height:34px;
+            font-size:16px;
+          }
+
+        }
+      }
+    }
+    .heart {
+      figure {
+        z-index:-1;
+        transform:rotate(90deg);
+        top:45%;
+        left:60%;
+      }
+    }
+  }
+  .categories {
+    display:none;
+  }
+}
+
 }
 </style>

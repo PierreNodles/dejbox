@@ -51,38 +51,88 @@ new Vue({
       {
         name:"Le boeuf fondant, sauce au vin & écrasé de pommes de terre",
         price:"7,50€",
-        description:"Le plat indien par excellence : goûtez à notre incroyable poulet tikka massala ! Cette sauce au yaourt et aux épices est littéralement à tomber ! On ne voudrait pas vous gâcher la surprise mais : vous allez adorer !",
         img: "./assets/boeuf-fondant.jpg",
-        ingredients: "Tomate",
-        nutrition: "C'est bon pour vous",
         cookingNotice: "À réchauffer au micro-onde pendant environ 2 mins",
         weight:"420",
-        id:1,
-        showModale:false
+        showModale:false,
+        tabs: {
+          description: {
+            title:"Description",
+            content:"Le plat indien par excellence : goûtez à notre incroyable poulet tikka massala ! Cette sauce au yaourt et aux épices est littéralement à tomber ! On ne voudrait pas vous gâcher la surprise mais : vous allez adorer !",
+            selected:true,
+            isActive:true,
+          },
+          ingredient: {
+            title:"Ingrédients",
+            content:"Tomate",
+            selected:false,
+            isActive:false
+          },
+          nutrition: {
+            title:"Valeurs nutrionnelles",
+            content:"C'est bon pour vous",
+            selected:false,
+            isActive:false
+          }
+        }
       },
       {
         name:"Le bon parmentier de boeuf",
         price:"7,50€",
-        description:"Le plat indien par excellence : goûtez à notre incroyable poulet tikka massala ! Cette sauce au yaourt et aux épices est littéralement à tomber ! On ne voudrait pas vous gâcher la surprise mais : vous allez adorer !",
         img: "./assets/parmentier.jpg",
-        ingredients: "Tomate",
-        nutrition: "C'est bon pour vous",
         cookingNotice: "À réchauffer au micro-onde pendant environ 2 mins",
         weight:"420",
         id:2,
-        showModale:false
+        showModale:false,
+        tabs: {
+          description: {
+            title:"Description",
+            content:"Le plat indien par excellence : goûtez à notre incroyable poulet tikka massala ! Cette sauce au yaourt et aux épices est littéralement à tomber ! On ne voudrait pas vous gâcher la surprise mais : vous allez adorer !",
+            selected:true,
+            isActive:true
+          },
+          ingredient: {
+            title:"Ingrédients",
+            content:"Tomate 2",
+            selected:false,
+            isActive:false
+          },
+          nutrition: {
+            title:"Valeurs nutrionnelles",
+            content:"C'est bon pour vous",
+            selected:false,
+            isActive:false
+          }
+        }
       },
       {
         name:"Le poulet & pommes de terre rôties",
         price:"7,50€",
-        description:"Le plat indien par excellence : goûtez à notre incroyable poulet tikka massala ! Cette sauce au yaourt et aux épices est littéralement à tomber ! On ne voudrait pas vous gâcher la surprise mais : vous allez adorer !",
         img: "./assets/poulet.jpg",
-        ingredients: "Tomate",
-        nutrition: "C'est bon pour vous",
         cookingNotice: "À réchauffer au micro-onde pendant environ 2 mins",
         weight:"420",
         id:3,
-        showModale:false
+        showModale:false,
+        tabs: {
+          description: {
+            title:"Description",
+            content:"Le plat indien par excellence : goûtez à notre incroyable poulet tikka massala ! Cette sauce au yaourt et aux épices est littéralement à tomber ! On ne voudrait pas vous gâcher la surprise mais : vous allez adorer !",
+            selected:true,
+            isActive:true
+          },
+          ingredient: {
+            title:"Ingrédients",
+            content:"Tomate 3",
+            selected:false,
+            isActive:false
+          },
+          nutrition: {
+            title:"Valeurs nutrionnelles",
+            content:"C'est bon pour vous",
+            selected:false,
+            isActive:false
+          }
+        }
       }
     ]
   }

@@ -75,13 +75,14 @@ $red: #FF5A4F;
   .menus-title {
     margin-bottom:35px;
     h2 {
+      font-family: 'Galano Grotesque Bold';
       font-size:32px;
       color:#212121;
       opacity:0.84;
       padding-left:20px;
     }
     span.title-background {
-
+      font-family: 'Galano Grotesque Bold';
       font-size: 125px;
       color: #727272;
       opacity: 0.04;
@@ -162,6 +163,10 @@ $red: #FF5A4F;
             justify-content: space-between;
             align-items: center;
 
+            .menu-price {
+              font-family: "LibreBaskerville-Regular";
+            }
+
             .bubble {
               font-family: 'Galano Grotesque Bold';
               width: 2em;
@@ -212,6 +217,17 @@ $red: #FF5A4F;
             }
           }
         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .menus-container {
+    .menus-title {
+      h2 {
+        font-size:24px;
+        padding-left:0;
       }
     }
   }

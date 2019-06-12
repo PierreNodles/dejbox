@@ -47,8 +47,11 @@
         </ul>
 
       </div>
-    </div>
 
+    </div>
+    <div class="mobileOnly delivery">
+      <p><b>Livré à : Nocibé Lille</b> 12, rue du calvaire 59800 Lille</p>
+    </div>
   </nav>
 </template>
 
@@ -83,6 +86,7 @@ export default {
       align-items: center;
       .logo {
         max-width:37px;
+        min-width:37px;
       }
       .calendar {
         display:flex;
@@ -152,5 +156,41 @@ export default {
 
   }
 
+}
+
+@media only screen and (max-width: 767px) {
+  .navbar {
+    .container {
+      .navbar-left {
+        .calendar {
+          display:none;
+        }
+      }
+      .navbar-right {
+        ul {
+          li.info {
+            span.info-text {
+              display:none;
+            }
+            &#location {
+              display:none;
+            }
+          }
+
+        }
+      }
+    }
+
+    .delivery {
+      padding: 15px 0 10px 0;
+      p {
+        font-size:12px;
+        text-align:center;
+        color:#4E4E4E;
+        opacity:0.89;
+      }
+    }
+
+  }
 }
 </style>

@@ -1,60 +1,163 @@
 <template>
   <div class="modale-wrapper" v-if="menu.showModale" v-on:click.self="menu.showModale = !menu.showModale">
     <div class='addToCart'>
-      <div class="addedToCart" >
+      <span class="mobileOnly trigger fa fa-chevron-left" v-on:click.self="menu.showModale = !menu.showModale"></span>
 
-        <div class="columns">
+      <div class="columns">
 
-          <div class="column menu-img">
-            <figure>
-              <img v-bind:src="menu.img" alt="">
-            </figure>
-          </div>
-          <div class="column modale">
-            <div class="single-menu-details">
-              <div class="menu-name">
-                <h3 v-html="menu.name"></h3>
+        <div class="column menu-img">
+          <figure>
+            <img v-bind:src="menu.img" alt="">
+          </figure>
+        </div>
+        <div class="column details">
+          <div class="single-menu-details">
+            <div class="menu-name">
+              <h3 v-html="menu.name"></h3>
+            </div>
+            <div class="menu-infos">
+              <div class="single-menu-review">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="count-review">(20 avis)</span>
               </div>
-              <div class="menu-infos">
-                <div class="single-menu-review">
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="count-review">(20 avis)</span>
-                </div>
-                <div class="menu-weight">
-                  <p>+/- {{menu.weight}} g</p>
-                </div>
+              <div class="menu-weight">
+                <p>+/- {{menu.weight}} g</p>
               </div>
-              <div class="menu-cooking-notice">
-                <p>{{menu.cookingNotice}}</p>
-              </div>
+            </div>
+            <div class="mobileOnly">
+              {{ menu.tabs.description.content}}
+            </div>
+            <div class="menu-cooking-notice">
+              <p>{{menu.cookingNotice}}</p>
+            </div>
 
-              <div class="single-menu-footer">
-                <span class="menu-price">{{menu.price}}</span>
-                <div class="bubble">
-                  <p class="first fa fa-arrow-right"></p>
-                  <p class="second">Ajouter <span class="plus fa fa-arrow-right"></span></p>
-                </div>
+            <div class="single-menu-footer">
+              <span class="menu-price">{{menu.price}}</span>
+              <div class="bubble">
+                <p class="first fa fa-arrow-right"></p>
+                <p class="second">Ajouter <span class="plus fa fa-arrow-right"></span></p>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="columns tab-column">
+        <tab :tabs="menu.tabs"></tab>
+      </div>
+
+
+
+      <div class="upsales">
         <div class="columns">
-          <div class="tabs">
-            <ul>
-              <li class="is-active"><a>Description</a></li>
-              <li><a>Music</a></li>
-              <li><a>Videos</a></li>
-              <li><a>Documents</a></li>
-            </ul>
+          <div class="upsales-title column">
+            <h4>Vous aimerez aussi !</h4>
           </div>
         </div>
 
 
+        <div class="columns">
+
+
+          <div class="column">
+            <div class="single-menu">
+              <div class="menu-img">
+                <figure class="main-img">
+                  <img :src="menu.img" alt=""><br>
+                </figure>
+              </div>
+              <div class="single-menu-details">
+                <div class="menu-name">
+                  <h3>Chips</h3>
+                </div>
+                <div class="single-menu-footer">
+                  <span class="menu-price">1,00€</span>
+                  <div class="bubble">
+                    <p class="first fa fa-arrow-right"></p>
+                    <p class="second">Ajouter <span class="plus fa fa-arrow-right"></span></p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="column">
+            <div class="single-menu">
+              <div class="menu-img">
+                <figure class="main-img">
+                  <img :src="menu.img" alt=""><br>
+                </figure>
+              </div>
+              <div class="single-menu-details">
+                <div class="menu-name">
+                  <h3>Chips</h3>
+                </div>
+                <div class="single-menu-footer">
+                  <span class="menu-price">1,00€</span>
+                  <div class="bubble">
+                    <p class="first fa fa-arrow-right"></p>
+                    <p class="second">Ajouter <span class="plus fa fa-arrow-right"></span></p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="column">
+            <div class="single-menu">
+              <div class="menu-img">
+                <figure class="main-img">
+                  <img :src="menu.img" alt=""><br>
+                </figure>
+              </div>
+              <div class="single-menu-details">
+                <div class="menu-name">
+                  <h3>Chips</h3>
+                </div>
+                <div class="single-menu-footer">
+                  <span class="menu-price">1,00€</span>
+                  <div class="bubble">
+                    <p class="first fa fa-arrow-right"></p>
+                    <p class="second">Ajouter <span class="plus fa fa-arrow-right"></span></p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="column">
+            <div class="single-menu">
+              <div class="menu-img">
+                <figure class="main-img">
+                  <img :src="menu.img" alt=""><br>
+                </figure>
+              </div>
+              <div class="single-menu-details">
+                <div class="menu-name">
+                  <h3>Chips</h3>
+                </div>
+                <div class="single-menu-footer">
+                  <span class="menu-price">1,00€</span>
+                  <div class="bubble">
+                    <p class="first fa fa-arrow-right"></p>
+                    <p class="second">Ajouter <span class="plus fa fa-arrow-right"></span></p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
       </div>
+
+
     </div>
   </div>
 
@@ -62,9 +165,14 @@
 </template>
 
 <script>
+import Tab from './BaseMenuModaleTab.vue'
+
 export default {
   props: ['menu'],
   name: "modale",
+  components: {
+    'tab' : Tab
+  },
 }
 
 </script>
@@ -80,18 +188,25 @@ export default {
   left:0;
   z-index:98;
 
+
+
   .addToCart {
     position:absolute;
-
     top:10%;
     left:10%;
     width:80%;
     min-height:80vh;
+    margin-bottom:80px;
 
-    background-color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color:#FAFAFA;
     border-radius:6px;
 
     padding: 40px;
+
     .columns {
       margin:0;
       .column {
@@ -105,13 +220,14 @@ export default {
         overflow:hidden;
       }
     }
-    .modale {
+    .details {
       display:flex;
+      padding-left:40px;
       .single-menu-details {
         .menu-name {
           flex-grow: 1;
-          h2 {
-            font-size:36px;
+          h3 {
+            font-size:32px !important;
           }
         }
         .menu-infos {
@@ -147,6 +263,61 @@ export default {
           }
         }
 
+      }
+    }
+  }
+  .upsales {
+    h4 {
+      font-size:20px;
+      font-family: 'Galano Grotesque Bold';
+    }
+    .single-menu-details {
+      min-height:70px !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .modale-wrapper {
+    .addToCart {
+      top:0;
+      left:0;
+      width:100%;
+      padding:20px 10px 10px 10px;
+      .trigger {
+        color:#616161;
+        padding : 0 0 10px 5px;
+        font-size:20px;
+
+      }
+      .details {
+        padding: 10px;
+        .single-menu-details {
+          >* {
+            margin-top:10px;
+            margin-bottom:10px;
+          }
+          .menu-name {
+            h3 {
+              font-size:20px !important;
+            }
+          }
+          .menu-infos {
+            .menu-weight {
+              display:none;
+            }
+          }
+          .menu-cooking-notice {
+            display:none;
+          }
+          
+        }
+      }
+      .tab-column {
+        display:none;
+      }
+      .upsales {
+        display:none;
       }
     }
   }
